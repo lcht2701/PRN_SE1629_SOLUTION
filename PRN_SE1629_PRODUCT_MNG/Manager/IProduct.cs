@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace PRN.SE1629;
 
-namespace PRN_SE1629_PRODUCT_MNG.Manager
+public interface IProduct
 {
-    internal class IProduct
-    {
-    }
+    public abstract void Add(Product p);
+    public abstract bool Update(Product p);
+    public abstract bool Delete(Product p);
+    public abstract Product GetProduct(int productID);
+    void Display();
+
 }
