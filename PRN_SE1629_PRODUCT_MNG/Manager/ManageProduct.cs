@@ -50,7 +50,22 @@ public class ProductManagement:IProduct
 
     public bool Delete(Product p)
     {
-        throw new NotImplementedException();
+        int index = -1;
+        /*1. Tim phan tu p do co trong mang hay khong? */
+        foreach (var item in this.lstProduct)
+        {   
+            if (item != null && item.Id == p.Id)
+            {
+                /*Neu tim thay thi xoa di*/
+                for(int  i = index; i < size; i++)
+                {
+                    lstProduct[i] = lstProduct[i + 1];                 
+                }
+                lstProduct[size - 1] = null;
+                return true;
+            }
+        }
+        return false;
     }
 
     public void Display()
