@@ -19,7 +19,8 @@ public class ManageCategories
 {
     SqlConnection connection;
     SqlCommand command;
-    string ConnectionString = "Server=(local);uid=sa;pwd=thanhWasab1;database=FptEduStore;trustCertificate=true";
+    string ConnectionString = "Server=(local); uid=sa; pwd=thanhWasab1; " +
+                    "database=FptEduStore; TrustServerCertificate=True";
     public List<Category> GetCategories()
     {
         List<Category> categories = new List<Category>();
